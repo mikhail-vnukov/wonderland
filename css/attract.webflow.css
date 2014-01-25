@@ -1,0 +1,307 @@
+
+@font-face { 
+	font-family: Days; src: url('Days.otf'); 
+	}
+
+@font-face { 
+	font-family: Hattori_Hanso; src: url('Hattori_Hanso.otf'); 
+	}
+
+@font-face { 
+	font-family: helsinki; src: url('helsinki.ttf'); 
+	}
+
+@font-face { 
+	font-family: CaviarDreams; src: url('CaviarDreams.ttf'); 
+	}
+
+@font-face { 
+	font-family: Forum-Regular; src: url('Forum-Regular.otf'); 
+	}
+
+body {
+  background-color: #fcf9f2; 
+  font-family: Hattori_Hanso, Arial, Helvetica, sans-serif;
+  
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+h1 {
+  margin: 10px 0px 27px;
+  font-family:'Trebuchet MS', Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 39px;
+  line-height: 41px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: none;
+  text-shadow: rgba(0, 0, 0, 0.29) 0px 4px 0px;
+}
+h2 {
+  margin: 10px 0px;
+  float: none;
+  font-family: CaviarDreams, sans-serif;
+  color: #300;
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 400;
+}
+h3 {
+  font-family: CaviarDreams, sans-serif;
+  margin: 14px 0px 10px;
+  color: #c0392b;
+  float: none;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+h4 {
+  margin: 10px 0px;
+  color: #b3b1b1;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+  font-family: Bitter, serif;
+  color: #9c9088;
+}
+.button {
+  width: 85%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #c0392b;
+  border-radius: 3px;
+  background-color: #c0392b;
+  background-image: -webkit-linear-gradient(#e74c3c, #c0392b 35%, #c0392b);
+  background-image: -o-linear-gradient(#e74c3c, #c0392b 35%, #c0392b);
+  background-image: linear-gradient(#e74c3c, #c0392b 35%, #c0392b);
+  box-shadow: none;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-size: 19px;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover {
+  border-color: #e74c3c;
+  background-image: -webkit-linear-gradient(#e74c3c, #e74c3c 80%, #c0392b);
+  background-image: -o-linear-gradient(#e74c3c, #e74c3c 80%, #c0392b);
+  background-image: linear-gradient(#e74c3c, #e74c3c 80%, #c0392b);
+  box-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px 0px inset;
+}
+.button.formbutton {
+  margin-left: 19px;
+  padding-left: 4px;
+  border-radius: 3px;
+  text-align: center;
+}
+.button.callbutton {
+  width: 55%;
+  height: 49px;
+  margin-left: 213px;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  float: left;
+  background-image: -webkit-linear-gradient(#34495e, #2c3e50 40%, #2c3e50);
+  background-image: -o-linear-gradient(#34495e, #2c3e50 40%, #2c3e50);
+  background-image: linear-gradient(#34495e, #2c3e50 40%, #2c3e50);
+  font-size: 16px;
+}
+.header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.jumbo {
+  padding-top: 47px;
+  padding-bottom: 47px;
+  border-top: 4px solid #300;
+  background-color: #8c8c8c;
+  background-image: url('../images/bubbles.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.subtitle {
+  font-family: Bitter, serif;
+  color: white;
+  font-size: 17px;
+}
+.call-now {
+  margin-top: 4px;
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  font-size: 19px;
+  line-height: 12px;
+  text-align: right;
+}
+.testimonials {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #2c3e50;
+}
+.quote {
+  font-family: Bitter, serif;
+  color: #a19181;
+  font-size: 17px;
+}
+.content {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.wrapper {
+  display: block;
+  width: 100%;
+  margin-top: -363px;
+  margin-right: 16px;
+  margin-left: 0px;
+  padding: 8px 7px 7px 12px;
+  float: none;
+  border: 7px solid #c0392b;
+  border-radius: 3px;
+  background-color: #f2efeb;
+  box-shadow: rgba(0, 0, 0, 0.34) 0px 0px 11px 0px;
+  direction: ltr;
+  text-align: left;
+}
+.call-to-action {
+  margin-top: 0px;
+  margin-bottom: 6px;
+  border: 0px solid black;
+  border-radius: 0px;
+  box-shadow: white 0px 0px 6px 0px;
+  font-family: CaviarDreams, sans-serif;
+  color: #2c3e50;
+  font-size: 27px;
+  line-height: 25px;
+  text-align: center;
+}
+.note {
+  margin-bottom: 13px;
+  color: #7a6e61;
+  font-size: 14px;
+  line-height: 18px;
+}
+.note.share {
+  font-size: 12px;
+  line-height: 16px;
+  font-style: italic;
+  text-align: center;
+}
+.footer {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-top: 3px solid #bdb5af;
+  background-color: #d9d1cb;
+}
+.copyright {
+  font-family: Bitter, serif;
+  color: #999191;
+  font-size: 15px;
+}
+.copyright.info {
+  color: rgba(51, 0, 0, 0.29);
+}
+.disadvantages {
+  margin-top: 53px;
+}
+@media (max-width: 991px) {
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 37px;
+    text-shadow: rgba(0, 0, 0, 0.29) 0px 4px 0px;
+  }
+  .jumbo {
+    background-image: url('../images/bubbles.jpg');
+    background-position: 50% 50%;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .wrapper {
+    width: 90%;
+    margin-top: -162px;
+    margin-left: 28px;
+    box-shadow: rgba(0, 0, 0, 0.34) 0px 0px 11px 0px;
+  }
+  .call-to-action {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+  }
+  .jumbo {
+    background-image: url('../images/bubbles.jpg');
+    background-position: 50% 50%;
+    text-align: center;
+  }
+  .call-now {
+    margin-bottom: 21px;
+    text-align: center;
+  }
+  .testimonials {
+    padding-right: 9px;
+    padding-left: 9px;
+    text-align: center;
+  }
+  .content {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+  .wrapper {
+    width: 100%;
+    margin-top: 22px;
+    margin-left: 0px;
+  }
+  .footer {
+    text-align: center;
+  }
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 30px;
+    text-shadow: rgba(0, 0, 0, 0.29) 0px 4px 0px;
+  }
+  .jumbo {
+    background-image: url('../images/bubbles.jpg');
+    background-position: 50% 50%;
+  }
+}
+
+.disadvantages li {
+	list-style-image: url(../images/icons/disadvantages/thunder1.png);
+}
+
+.advantages li {
+	list-style-image: url(../images/icons/thumbsup1.png);
+}
+
+
