@@ -13,7 +13,11 @@
 
 @font-face { 
 	font-family: CaviarDreams; src: url('CaviarDreams.ttf'); 
-	}
+}
+
+@font-face { 
+	font-family: CaviarDreamsBold; src: url('Caviar_Dreams_Bold.ttf'); 
+}
 
 @font-face { 
 	font-family: Forum-Regular; src: url('Forum-Regular.otf'); 
@@ -33,7 +37,7 @@ h1 {
 	margin: 10px 0px 27px;
 	font-family: CaviarDreams, Helvetica, Arial, sans-serif;
 	color: white;
-	font-size: 39px;
+	font-size: 2.3em;
 	line-height: 41px;
 	font-style: normal;
 	font-weight: 700;
@@ -63,11 +67,10 @@ h3 {
 h4 {
 	font-family: CaviarDreams, sans-serif;
 	margin: 10px 0px;
-	color: #b3b1b1;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 700;
-	text-align: left;
+	text-align: center;
 }
 h5 {
 	margin: 10px 0px;
@@ -87,54 +90,59 @@ p {
 	color: #9c9088;
 }
 .button {
-	width: 85%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding: 15px;
-	border: 1px solid #c0392b;
-	border-radius: 3px;
-	background-color: #c0392b;
-	background-image: -webkit-linear-gradient(#e74c3c, #c0392b 35%, #c0392b);
-	background-image: -o-linear-gradient(#e74c3c, #c0392b 35%, #c0392b);
-	background-image: linear-gradient(#e74c3c, #c0392b 35%, #c0392b);
+	background-color: #e74c3c;
 	box-shadow: none;
 	-webkit-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;
-	font-family: Montserrat, sans-serif;
 	color: white;
 	font-size: 19px;
 	text-align: center;
 	text-decoration: none;
+	width: 228.222px;
+	margin-left: 19px;
+	padding-left: 4px;
+	display: inline-block;
+
 }
 .button:hover {
 	border-color: #e74c3c;
-	background-image: -webkit-linear-gradient(#e74c3c, #e74c3c 80%, #c0392b);
-	background-image: -o-linear-gradient(#e74c3c, #e74c3c 80%, #c0392b);
-	background-image: linear-gradient(#e74c3c, #e74c3c 80%, #c0392b);
-	box-shadow: rgba(255, 255, 255, 0.45) 0px 1px 0px 0px inset;
+	box-shadow: none;
 }
-.button.formbutton {
-	margin-left: 19px;
-	padding-left: 4px;
-	border-radius: 3px;
-	text-align: center;
+
+.formbutton {
+	box-shadow: 5px 5px 5px rgba(64,1,1, 0.3);
 }
-.button.callbutton {
-	width: 55%;
-	height: 49px;
-	margin-left: 213px;
-	padding-top: 13px;
-	padding-bottom: 10px;
-	float: left;
-	background-image: -webkit-linear-gradient(#34495e, #2c3e50 40%, #2c3e50);
-	background-image: -o-linear-gradient(#34495e, #2c3e50 40%, #2c3e50);
-	background-image: linear-gradient(#34495e, #2c3e50 40%, #2c3e50);
-	font-size: 16px;
+
+.button.formbutton:hover {
+	background-color: #c0392b;
+}
+
+.button.singletrigger {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5em;
+	margin-bottom: 0em;
+	display: block;
+}
+
+.callbutton:hover {
+	background-color: #2980b9
+}
+.callbutton {
+	margin-left: auto;
+	background-color: #3498db;
+	box-shadow: 5px 5px 5px rgba(1,1,64, 0.3);
+	margin-right: auto;
+	display: block;
+
 }
 .w-container.header {
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 30px;
+	padding-bottom: 25px;
 
 }
 
@@ -144,9 +152,9 @@ p {
 .jumbo {
 	padding-top: 47px;
 	padding-bottom: 47px;
-	border-bottom: 4px solid #2c3e50;
+	/*border-bottom: 4px solid #2c3e50;*/
 	background-color: #8c8c8c;
-	background-image: url('../images/supply/bubbles_z.png');
+	background-image: url('../images/supply/bubbles.jpg');
 	background-position: 50% 50%;
 	background-size: cover;
 }
@@ -157,11 +165,16 @@ p {
 }
 .call-now {
 	margin-top: 4px;
-	font-family: Montserrat, sans-serif;
 	color: #333;
 	font-size: 19px;
 	line-height: 12px;
 	text-align: right;
+}
+
+.call-now strong {
+	font-size: 1.7em;
+	line-height: 0.7em;
+	font-family: CaviarDreamsBold, sans-serif;
 }
 .testimonials {
 	/*padding-top: 24px;
@@ -202,7 +215,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 .wrapper {
 	display: block;
 	width: 100%;
-	margin-top: -339px;
+	margin-top: -323px;
 	margin-right: 16px;
 	margin-left: 7px;
 	padding: 8px 7px 7px 12px;
@@ -350,10 +363,59 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 
 
 .disadvantages-stop-signal {
-	margin-top: 4em;
+	margin-top: 1.6em;
+	margin-left: 3em;
 }
 
 .super-container.feedbacks {
 	background-color: #f2f2f2;
-	padding-bottom: 4em;
+	padding-bottom: 3em;
+}
+
+/** Products */
+.products .w-row {
+	padding: 2em;
+	background-color: rgba(255, 255, 255, 1);
+	margin: 2em 0;
+}
+
+.products li {
+	background-position: 0 -19px;
+	_background-position: 0 6px;
+	background-repeat: no-repeat;
+	list-style-type: none;
+	padding: 0 0 20px 65px;
+	height: auto;
+}
+
+.w-row.birds {
+	position: relative;
+}
+img.birds {
+	position: absolute;
+	top: -14px;
+	right: -14px;
+	width: 10.3em;
+}
+
+.products .birds li {
+	background-image: url(../images/icons/lists/birds.png);
+}
+
+.products .ladder li {
+	background-image: url(../images/icons/lists/ladder.png);
+}
+
+.products .turnik li {
+	background-image: url(../images/icons/lists/turnik.png);
+}
+
+
+.closure {
+	margin-bottom: 1.5em;
+}
+
+.vk-group {
+	float: right;
+	margin-right: 3em;
 }
