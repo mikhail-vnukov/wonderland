@@ -56,8 +56,8 @@ h2 {
 }
 h3 {
 	font-family: CaviarDreams, sans-serif;
-	margin: 14px 0px 10px;
-	color: #c0392b;
+	margin: 14px 0px 30px;
+	color: #2c3e50;
 	float: none;
 	font-size: 25px;
 	line-height: 30px;
@@ -201,7 +201,7 @@ p {
 .advantages li {
 	list-style-image: url(../images/icons/thumbsup1.png);
 }
-.super-container.advantages {
+.super-container.advantages, .super-container.feedbacks, .super-container.disadvantages {
 background: #f2f2f2; /* Old browsers */
 background: -moz-linear-gradient(top,  #f2f2f2 0%, #e1e1e1 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e1e1e1)); /* Chrome,Safari4+ */
@@ -373,6 +373,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', end
 }
 
 /** Products */
+.products h3 {
+	margin-bottom: 10px;
+}
 .products .w-row {
 	padding: 2em;
 	background-color: rgba(255, 255, 255, 1);
