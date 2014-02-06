@@ -169,6 +169,8 @@ p {
 }
 
 .call-now strong {
+	color: #2c3e50;
+
 	vertical-align: middle;
 	font-family: CaviarDreamsBold, sans-serif;
 }
@@ -192,6 +194,11 @@ p {
 }
 .w-container.form {
 	margin-bottom: -38px;
+}
+
+.formcounter {
+	margin: 10px auto;
+	display: block;
 }
 
 /** Advantages */
@@ -219,7 +226,7 @@ p {
 
 .wrapper {
 	display: block;
-	width: 100%;
+	width: 355px;
 	margin-top: -323px;
 	margin-right: 16px;
 	margin-left: 7px;
@@ -238,11 +245,16 @@ p {
 	border: 0px solid black;
 	border-radius: 0px;
 	box-shadow: white 0px 0px 6px 0px;
-	font-family: CaviarDreams, sans-serif;
+	font-family: CaviarDreamsBold, sans-serif;
 	color: #2c3e50;
 	font-size: 27px;
-	line-height: 25px;
+	line-height: 30px;
 	text-align: center;
+}
+
+.form .formbutton {
+	margin: 10px auto;
+	display: block;
 }
 .note {
 	margin-bottom: 13px;
