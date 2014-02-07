@@ -34,6 +34,8 @@ body {
 	line-height: 20px;
 }
 h1 {
+	text-align: center;
+
 	margin: 10px 0px 27px;
 	font-family: CaviarDreams, Helvetica, Arial, sans-serif;
 	color: white;
@@ -124,11 +126,11 @@ p {
 }
 
 .callbutton:hover {
-	background-color: #2980b9
+	background-color: #16a085;
 }
 .callbutton {
 	margin-left: auto;
-	background-color: #3498db;
+	background-color: #1abc9c;
 	box-shadow: 5px 5px 5px rgba(1,1,64, 0.3);
 	margin-right: auto;
 	display: block;
@@ -161,11 +163,12 @@ p {
 	margin-top: 4px;
 	color: #333;
 	font-size: 2.2em;
-	text-align: right;
+	text-align: center;
+	margin-right: -208px
 }
 
 .call-now .callbutton {
-	margin-right: 34px;	
+	width: 289.222px;	
 }
 
 .call-now strong {
@@ -179,6 +182,10 @@ p {
 	width: 1.2em;
 	vertical-align: middle;
 }
+.video-trigger {
+	box-shadow: 5px 5px 5px rgba(33,33,33, 0.6);
+}
+
 .testimonials {
 	/*padding-top: 24px;
 	padding-bottom: 24px;*/
@@ -279,6 +286,10 @@ p {
 	border-top: 3px solid #bdb5af;
 	background-color: #d9d1cb;
 }
+.footer .button {
+	width: 289.222px;
+}
+
 h4 {
 	font-family: CaviarDreams, sans-serif;
 	margin: 10px 0px -0.5em;
