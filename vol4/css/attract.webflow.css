@@ -126,11 +126,11 @@ p {
 }
 
 .callbutton:hover {
-	background-color: #16a085;
+	background-color: #2980b9
 }
 .callbutton {
 	margin-left: auto;
-	background-color: #1abc9c;
+	background-color: #3498db;
 	box-shadow: 5px 5px 5px rgba(1,1,64, 0.3);
 	margin-right: auto;
 	display: block;
@@ -216,7 +216,9 @@ p {
 .super-container.advantages, 
 .super-container.feedbacks, 
 .super-container.disadvantages,
-.super-container.products {
+.super-container.products,
+.super-container.videos
+{
 	padding-top: 64px;
 
 	background: #f2f2f2; /* Old browsers */
@@ -286,6 +288,19 @@ p {
 }
 .footer .button {
 	width: 289.222px;
+}
+
+.copyright-col {
+	position: static;
+}
+
+.footer .w-row {
+	position: relative;
+}
+
+.footer .copyright {
+	position: absolute;
+	bottom: 0;
 }
 
 h4 {
@@ -475,12 +490,24 @@ img.birds {
 	background-image: url(../images/icons/lists/turnik.png);
 }
 
-
 .closure {
 	margin: 1.5em 0;
 }
 
-.vk-group {
-	float: right;
-	margin-right: 3em;
+
+/*videos*/
+.videos .video-gallery {
+	height: 338px;
+} 
+.videos .vk-group {
+	display: block;
+	margin: 0 auto;
 }
+
+.videos h4 {
+	margin: 0px 0px 0.5em;
+}
+
+.videos.super-container {
+	padding-bottom: 3em;
+} 
