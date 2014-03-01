@@ -10,17 +10,21 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/webflow.css">
+	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
+	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700,800,300&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='fonts/caviar.load' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 	<header>
 		<section class="header">
-			<img class="logo" src="images/header/logo_stub.png" width="201" alt="Piter Drive, аттракционы">
+			<img class="logo" src="images/header/logo.png" width="201" alt="Piter Drive, аттракционы">
 			<div class="phone">
 				<img class="phone-icon" src="images/header/phone.png">
 				<strong class="phone-number">8&nbsp;800&nbsp;778&nbsp;76&nbsp;67</strong>
-				<button>Заказать обратный звонок</button>	
+				<button class="trigger">Заказать обратный звонок</button>	
 			</div>
 		</section>
 	</header>
@@ -32,7 +36,9 @@
 			<img class="video-trigger" src="images/jumbo/video.png" width="456">
 			<form class="jumbo-form">
 				<h3 class="call-to-action">Внимание, акция!<br/> Доставка - бесплатно</h3>
-				<div class="formcounter" src="images/jumbo/lock_icon.png"></div>
+				<div>
+					<div id="countdown" class="clearfix countdown"></div>
+				</div>
 				<input type="text" placeholder="Как вас зовут" name="name" required="required"></input>
 				<input type="text" placeholder="Ваш телефон" name="telephone" required="required"></input>
 				<input type="text" placeholder="Ваш email или страница vkontakte" name="email" required="required"></input>
@@ -82,7 +88,7 @@
 					<span> У нас всегда есть есть аттракционы в наличии </span>
 				</div>
 			</div>
-			<button>Отправить заявку</button>
+			<button class="trigger">Отправить заявку</button>
 		</section>
 	</article>
 
@@ -110,64 +116,40 @@
 			<div class="item birds">
 				<img class="item-tumble" src="images/catalogue/birds.png">
 				<ul>
-					<li>
-						Самый доходный аттракцион
-					</li>
-					<li>
-						Мы поможем вам найти клиентов для сдачи в аренду!
-					</li>
-					<li>
-						В подарок - дизайнерский сайт + трафик на сайт
-					</li>
-					<li>
-						В подарок консультация на тему: "Алгоритм поиска и участия в фестивалях и организованных мероприятиях "
-					</li>
-					<li>
-						В подарок консультация на тему: "Организация и взаимодействие с арендодателем"
-					</li>
+					<li>Самый доходный аттракцион</li>
+					<li>Легко договориться с администрацией</li>
+					<li>Рогатка с защитой от коррозии и влаги</li>
+					<li>Консультация по ведению бизнеса</li>
+					<li>Игрушки в подарок</li>
 				</ul>
 				<img class="firstclass" src="images/catalogue/ribbon.png">
-				<button>Отправить заявку</button>
+				<button class="trigger">Отправить заявку</button>
 			</div>
 
 			<div class="item ladder">
 				<img class="item-tumble" src="images/catalogue/ladder.png">
 				<ul>
-					<li>
-						Золотая середина
-					</li>
-					<li>
-						Собственное производство! Высокое качество и соблюдение сроков
-					</li>
-					<li>
-						Бесплатная доставка по территории РФ
-					</li>
-					<li>
-						Комплект дополнительных аксессуаров в ПОДАРОК
-					</li>
+					<li>Один из самых быстроокупаемых аттракционов</li>
+					<li>Огромный ажиотаж среди и взрослых, и детей</li>
+					<li>Бесплатная консультация по секретам аттракциона</li>
+					<li>Покраска в любой цвет</li>
 				</ul>
 
-				<button>Отправить заявку</button>
+				<button class="trigger">Отправить заявку</button>
 			</div>
 
 			<div class="item turnik">
 				<img class="item-tumble" src="images/catalogue/turnik.png">
 				<ul>
-					<li>
-						Хит продаж 2013 года
-					</li>
-					<li>
-						Идея в том, что аттракцион веселая лестница прокручивается по своей оси ( благодаря механизму) и получается что на ней продержаться почти нереально.
-					</li>
-					<li>
-						Но хитрость в том, что этому реально обучится за несколько дней. И когда оператор ( уже обученный.
-					</li>
-					<li>
-						И когда оператор демонстрирует публике как за несколько секунд он зарабатывает 1000 рублей!
-					</li>
+					<li>Хит продаж 2013 года</li>
+					<li>Низкая цена по сравнению с конкурентами</li>
+					<li>Подшипник, защищённый от внешнего воздействия</li>
+					<li>Полностью разборный, помещается в авто</li>
+					<li>Усиленная конструкция</li>
+					<li>Покраска в любой цвет</li>
 				</ul>
 
-				<button>Отправить заявку</button>			
+				<button class="trigger">Отправить заявку</button>			
 			</div>
 		</section>
 	</article>
@@ -235,21 +217,21 @@
 				<div class="w-slider-nav w-slider-nav-invert w-round"></div>
 			</div>
 
-			<button>Отправить заявку</button>
+			<button class="trigger">Отправить заявку</button>
 		</section>
 	</article>
 	<article>
 		<h3>Как это выглядит в реальности?</h3>
 		<section>
-			<img class="video-gallery" src="images/icons/videos/Video_example.png"/>
-			<aside>
+			<img class="video-gallery" src="images/videos/Video_example.png"/>
+<!-- 			<aside>
 				<h4>Больше видео - в нашей группе VK</h4>
 				<img class="vk-group" src="images/icons/videos/vk_ex.png"></img>
-			</aside>
+			</aside> -->
 		</section>
 	</article>
 
-	<h3 class="closure">Здесь фраза о схемах производства аттракционов!</h3>
+	<h3 class="closure">У нас Вы можете приобрести схему производства аттракционов!</h3>
 
 	<footer>
 		<div class="finalnote">
@@ -259,10 +241,42 @@
 			<br/>
 			<strong>8&nbsp;800&nbsp;778&nbsp;76&nbsp;67</strong>
 			</h4>
-			<button class="strong">Заказать обратный звонок</button>			
+			<button class="trigger strong">Заказать обратный звонок</button>			
 		</div>
 	</footer>
+
+
+	<div  id="popup-form"  class="md-modal md-effect-13">
+		<form class="md-content">
+			<h3 class="call-to-action">Заполните, пожалуйста, заявку</h3>
+			<input type="text" placeholder="Как вас зовут" name="name" required="required"></input>
+			<input type="text" placeholder="Ваш телефон" name="telephone" required="required"></input>
+			<input type="text" placeholder="Ваш email или страница vkontakte" name="email" required="required"></input>
+			<div class="form-control clearfix">
+				<button class="submit-button strong">Отправить</button>
+				<button id="close-button" class="close-button" type="reset">Закрыть</button>
+			</div>
+			<div class="disclaimer">
+				<img src="images/jumbo/lock_icon.png">
+				Мы гарантируем, что ваши данные не будут переданы третьим лицам или использоваться в спам-рассылках.
+			</div>
+			<div class="form-done">
+				<p>Ваша заявка принята!Наши менеджеры свяжутся с вами в ближайшее время</p>
+			</div>
+			<div class="form-fail">
+				<p>Извините, что-то пошло не так во время отправки формы :(</p>
+			</div>
+		</form>
+	</div>
+	<div id="overlay" class="md-overlay"></div>
+
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/webflow.js"></script>
+
+	<script type="text/javascript" src="js/flipclock/base.js"></script>
+	<script type="text/javascript" src="js/flipclock/flipclock.js"></script>
+	<script type="text/javascript" src="js/flipclock/faces/HourlyCounter.js"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

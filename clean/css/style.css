@@ -95,7 +95,7 @@ section {
 	margin-right: auto;
 	max-width: 940px;
 }
-.adv-row:after, section:after {
+.adv-row:after, section:after, .clearfix:after {
     content: ".";
     display: block;
     height: 0;
@@ -177,7 +177,17 @@ form {
 	z-index: 1;
 	direction: ltr;
 	text-align: left;
+
+	padding: 8px 7px 7px 12px;
+	background-color: #f2efeb;
+
+	border: 7px solid #c0392b;
+	border-radius: 3px;
+
+	box-shadow: 5px 5px 5px rgba(64,1,1, 0.6);
 }
+
+
 /*header*/
 header {
 	background-color: #f2f2f2;	
@@ -235,9 +245,9 @@ header {
 }
 
 .video-trigger {
-	margin-top: 47px;
+	margin-top: 87px;
 	margin-bottom: 47px;
-
+	
 	box-shadow: 5px 5px 5px rgba(33,33,33, 0.6);
 }
 
@@ -247,11 +257,7 @@ header {
 	right: -61px;
 
 	width: 355px;
-	padding: 8px 7px 7px 12px;
-	border: 7px solid #c0392b;
-	border-radius: 3px;
-	background-color: #f2efeb;
-	box-shadow: 5px 5px 5px rgba(64,1,1, 0.6);
+
 }
 
 .formcounter {
@@ -504,4 +510,17 @@ footer {
 footer button {
 	width: 289.222px;
 	margin-top: 1em;
+}
+
+
+/* popup */
+
+.submit-button {
+	float: left;
+	margin-left: 2em;
+}
+
+.close-button {
+	float: right;
+	margin-right: 2em;
 }
