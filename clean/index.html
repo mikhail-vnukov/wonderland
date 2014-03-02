@@ -12,7 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="css/webflow.css">
 	<link rel="stylesheet" type="text/css" href="css/flipclock.css">
 	<link rel="stylesheet" type="text/css" href="css/modal.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/video.gallery.css" >
+
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600,700,800,300&subset=latin,cyrillic-ext,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='fonts/caviar.load' rel='stylesheet' type='text/css'>
 
@@ -20,10 +21,10 @@
 <body>
 	<header>
 		<section class="header">
-			<img class="logo" src="images/header/logo.png" width="201" alt="Piter Drive, аттракционы">
+		<img class="logo"  src="images/header/logo_piterdrive.png" onerror="this.src='images/header/logo_piterdrive.png'" alt="Piter Drive, аттракционы" width="340" />
 			<div class="phone">
 				<img class="phone-icon" src="images/header/phone.png">
-				<strong class="phone-number">8&nbsp;800&nbsp;778&nbsp;76&nbsp;67</strong>
+				<strong class="phone-number">8&nbsp;904&nbsp;337&nbsp;11&nbsp;76</strong>
 				<button class="trigger">Заказать обратный звонок</button>	
 			</div>
 		</section>
@@ -33,7 +34,11 @@
 
 	<article class="jumbo">
 		<section >
-			<img class="video-trigger" src="images/jumbo/video.png" width="456">
+			<a href="http://www.youtube.com/embed/H49bvBz9E3g?autoplay=1" target="_blank" onclick="openVideo(this); return false;">
+				<img class="video-trigger" src="images/jumbo/video.png" width="456">	
+			</a>
+			
+
 			<form class="jumbo-form">
 				<h3 class="call-to-action">Внимание, акция!<br/> Доставка - бесплатно</h3>
 				<div>
@@ -114,7 +119,10 @@
 		<h3>Три вида аттракционов:</h3>
 		<section class="catalogue">
 			<div class="item birds">
-				<img class="item-tumble" src="images/catalogue/birds.png">
+				<a href="#abirds" onclick="openGallery(this); return false;">
+					<img class="item-tumble" src="images/catalogue/birds.png">
+					<img class="firstclass" src="images/catalogue/ribbon.png">
+				</a>
 				<ul>
 					<li>Самый доходный аттракцион</li>
 					<li>Легко договориться с администрацией</li>
@@ -122,24 +130,30 @@
 					<li>Консультация по ведению бизнеса</li>
 					<li>Игрушки в подарок</li>
 				</ul>
-				<img class="firstclass" src="images/catalogue/ribbon.png">
+				<span class="price">59 999 руб.</span>
+
 				<button class="trigger">Отправить заявку</button>
 			</div>
 
 			<div class="item ladder">
-				<img class="item-tumble" src="images/catalogue/ladder.png">
+				<a href="#ladder" onclick="openGallery(this); return false;">
+					<img class="item-tumble" src="images/catalogue/ladder.png">	
+				</a>
+				
 				<ul>
 					<li>Один из самых быстроокупаемых аттракционов</li>
 					<li>Огромный ажиотаж среди и взрослых, и детей</li>
 					<li>Бесплатная консультация по секретам аттракциона</li>
 					<li>Покраска в любой цвет</li>
 				</ul>
-
+				<span class="price">21 999 руб.</span>
 				<button class="trigger">Отправить заявку</button>
 			</div>
 
 			<div class="item turnik">
-				<img class="item-tumble" src="images/catalogue/turnik.png">
+				<a href="#turnik" onclick="openGallery(this); return false;">
+					<img class="item-tumble" src="images/catalogue/turnik.png">
+				</a>
 				<ul>
 					<li>Хит продаж 2013 года</li>
 					<li>Низкая цена по сравнению с конкурентами</li>
@@ -148,7 +162,7 @@
 					<li>Усиленная конструкция</li>
 					<li>Покраска в любой цвет</li>
 				</ul>
-
+				<span class="price">14 500 руб.</span>
 				<button class="trigger">Отправить заявку</button>			
 			</div>
 		</section>
@@ -160,53 +174,81 @@
 			<div class="w-slider" data-animation="slide" data-duration="500" data-infinite="1" data-easing="ease-in-quart">
 				<div class="w-slider-mask">
 					<header class="w-slide">
-							<img class="feedback-media" src="images/review/photoreview.jpg">
-							<div class="feedback-content">
-								<h6>"...как такая дорогая покупка может быстро окупиться?"</h6>
-								<p>
-									<img class="feedback-icon" src="images/review/person.png">Вадим Иванов, Санкт-Петербург, начинающий предприниматель
-								</p>
-								<p>
-									<img class="feedback-icon" src="images/review/check.png">Выбор: <b>аттракцион "Angry Birds"</b>
-								</p>
-								<p>
-									<img class="feedback-icon" src="images/review/text.png"><em>"Здесь клиент Вадим кратко, но с душой рассказывает о своем опыте покупки и заработка на "Angry Birds", как долго сомневался, боялся выбрать самый дорогой аттракцион и как все круто получилось в итоге"</em>
-								</p>
-								<span class="feedback-links">http://vk.com</span>
-							</div>
-					</header>
-					<div class="w-slide">						
-						<img class="feedback-media" src="images/review/photoreview.jpg">
+						<img class="feedback-media" src="images/review/photos/review1.jpg">
 						<div class="feedback-content">
-							<h6>"...как такая дорогая покупка может быстро окупиться?"</h6>
+							<h6>"Спасибо за быструю доставку"</h6>
 							<p>
-								<img class="feedback-icon" src="images/review/person.png">Вадим Иванов, Санкт-Петербург, начинающий предприниматель
+								<img class="feedback-icon" src="images/review/person.png">Александра Карпова, Москва
 							</p>
 							<p>
 								<img class="feedback-icon" src="images/review/check.png">Выбор: <b>аттракцион "Angry Birds"</b>
 							</p>
 							<p>
-								<img class="feedback-icon" src="images/review/text.png"><em>"Здесь клиент Вадим кратко, но с душой рассказывает о своем опыте покупки и заработка на "Angry Birds", как долго сомневался, боялся выбрать самый дорогой аттракцион и как все круто получилось в итоге"</em>
+								<img class="feedback-icon" src="images/review/text.png"><em>"Купила 2 аттракциона: пока ни на одном никто не выиграл – всё работает, даже зазывала не нужен, народ сразу собирается. Ещё футболки классные в подарок были. Мелочь, а приятно."</em>
 							</p>
-							<span class="feedback-links">http://vk.com</span>
+						</div>
+					</header>
+					<div class="w-slide">						
+						<img class="feedback-media" src="images/review/photos/review2.jpg">
+						<div class="feedback-content">
+							<h6>"Долго думал какой бизнес начать."</h6>
+							<p>
+								<img class="feedback-icon" src="images/review/person.png">Егор Дорохин, Хабаровск
+							</p>
+							<p>
+								<img class="feedback-icon" src="images/review/check.png">Выбор: <b>аттракцион "Турник"</b>
+							</p>
+							<p>
+								<img class="feedback-icon" src="images/review/text.png"><em>"Долго думал какой бизнес начать. Потом увидел на улице толпы людей вокруг аттракциона турник. Сомневался будет ли такой ажиотаж, окупится ли, но решился и купил. Первый день страшно было выставляться, но потом народ пошёл. Всё окупилось, в следующем сезоне планирую продолжить."</em>
+							</p>
 						</div>
 					</div>
 					<div class="w-slide">						
-						<img class="feedback-media" src="images/review/photoreview.jpg">
+						<img class="feedback-media" src="images/review/photos/review3.jpg">
 						<div class="feedback-content">
-							<h6>"...как такая дорогая покупка может быстро окупиться?"</h6>
+							<h6>"...всё боялся, что что-то будет не так."</h6>
 							<p>
-								<img class="feedback-icon" src="images/review/person.png">Вадим Иванов, Санкт-Петербург, начинающий предприниматель
+								<img class="feedback-icon" src="images/review/person.png">Зейналян Арсен, Киров
 							</p>
 							<p>
 								<img class="feedback-icon" src="images/review/check.png">Выбор: <b>аттракцион "Angry Birds"</b>
 							</p>
 							<p>
-								<img class="feedback-icon" src="images/review/text.png"><em>"Здесь клиент Вадим кратко, но с душой рассказывает о своем опыте покупки и заработка на "Angry Birds", как долго сомневался, боялся выбрать самый дорогой аттракцион и как все круто получилось в итоге"</em>
+								<img class="feedback-icon" src="images/review/text.png"><em>"Брал аттракцион лесенка, всё боялся, что что-то будет не так. Ещё в пути была на день дольше, думал вообще не придёт. Всё пришло в мягкой упаковке, ничего не потерялось, все детали целы. Претензий к аттракциону нет, уже почти окупился."</em>
 							</p>
-							<span class="feedback-links">http://vk.com</span>
 						</div>
 					</div> 
+
+					<div class="w-slide">						
+						<img class="feedback-media" src="images/review/photos/review4.jpg">
+						<div class="feedback-content">
+							<p>
+								<img class="feedback-icon" src="images/review/person.png">Иван Богданов, Санкт-Петербург
+							</p>
+							<p>
+								<img class="feedback-icon" src="images/review/check.png">Выбор: <b>аттракцион "Пьяная лестница"</b>
+							</p>
+							<p>
+								<img class="feedback-icon" src="images/review/text.png"><em>"Купил пьяную лестницу, сделана качественно, ширину ступенек можно сделать чуть больше, но это кому как – не столь принципиально."</em>
+							</p>
+						</div>
+					</div>
+
+					<div class="w-slide">						
+						<img class="feedback-media" src="images/review/photos/review5.jpg">
+						<div class="feedback-content">
+							<h6>"Спасибо за аттракцион, быстро окупился"</h6>
+							<p>
+								<img class="feedback-icon" src="images/review/person.png">Сергей Павлов, Воронеж
+							</p>
+							<p>
+								<img class="feedback-icon" src="images/review/check.png">Выбор: <b>аттракцион "Пьяная лестница"</b>
+							</p>
+							<p>
+								<img class="feedback-icon" src="images/review/text.png"><em>"Заказывал аттракцион маугли ("пьяная лестница"). Поначалу ажиотаж был не очень большой, потом научил работника забираться на верх лестницы: люди увидели, что это возможно, сразу огромная толпа собралась, все сотками махали, хотели попробовать. Спасибо за аттракцион, быстро окупился."</em>
+							</p>
+						</div>
+					</div>
 				</div>
 				<div class="w-slider-arrow-left">
 					<div class="w-icon-slider-left"></div>
@@ -223,7 +265,37 @@
 	<article>
 		<h3>Как это выглядит в реальности?</h3>
 		<section>
-			<img class="video-gallery" src="images/videos/Video_example.png"/>
+			<div class="video-gallery w-slider" data-animation="slide" data-duration="500" data-infinite="1" data-easing="ease-in-quart">
+				<div class="w-slider-mask">
+					<header class="w-slide">
+						<a onclick="openVideo(this); return false;"  target="_blank" href="http://www.youtube.com/embed/EDeVhLUsog?autoplay=1">
+							<img src="images/video/video1.jpg" width="752">	
+						</a>
+					</header>
+					<div class="w-slide">
+						<a onclick="openVideo(this); return false;"  target="_blank" href="http://www.youtube.com/embed/hcs8SlM2sTs?autoplay=1">
+							<img src="images/video/video3.jpg" width="752">	
+						</a>
+					</div>
+					<div class="w-slide">
+						<a onclick="openVideo(this); return false;"  target="_blank" href="http://www.youtube.com/embed/6xF3bTPNtKs?autoplay=1">
+							<img src="images/video/video4.jpg" width="752">	
+						</a>
+					</div>
+					<div class="w-slide">
+						<a onclick="openVideo(this); return false;"  target="_blank" href="http://www.youtube.com/embed/NHuLmEq_qXg?autoplay=1">
+							<img src="images/video/video2.jpg" width="752">	
+						</a>
+					</div>
+				</div>
+				<div class="w-slider-arrow-left">
+					<div class="w-icon-slider-left"></div>
+				</div>
+				<div class="w-slider-arrow-right">
+					<div class="w-icon-slider-right"></div>
+				</div>
+				<div class="w-slider-playlist w-slider-nav w-playlist w-slider-nav-invert"></div>
+			</div>
 <!-- 			<aside>
 				<h4>Больше видео - в нашей группе VK</h4>
 				<img class="vk-group" src="images/icons/videos/vk_ex.png"></img>
@@ -239,19 +311,21 @@
 
 			<h4>Остались вопросы?&nbsp;Звоните -&nbsp;поможем!
 			<br/>
-			<strong>8&nbsp;800&nbsp;778&nbsp;76&nbsp;67</strong>
+			<strong>8&nbsp;904&nbsp;337&nbsp;11&nbsp;76</strong>
 			</h4>
 			<button class="trigger strong">Заказать обратный звонок</button>			
 		</div>
 	</footer>
 
 
-	<div  id="popup-form"  class="md-modal md-effect-13">
+	<div  id="popup-form"  class="popup-form md-modal md-effect-13">
 		<form class="md-content">
-			<h3 class="call-to-action">Заполните, пожалуйста, заявку</h3>
+			<h3 class="call-to-action">Форма заявки</h3>
 			<input type="text" placeholder="Как вас зовут" name="name" required="required"></input>
 			<input type="text" placeholder="Ваш телефон" name="telephone" required="required"></input>
 			<input type="text" placeholder="Ваш email или страница vkontakte" name="email" required="required"></input>
+			<textarea rows="3" type="textarea" placeholder="Ваши комментарии" name="comment"></textarea>
+
 			<div class="form-control clearfix">
 				<button class="submit-button strong">Отправить</button>
 				<button id="close-button" class="close-button" type="reset">Закрыть</button>
@@ -268,6 +342,100 @@
 			</div>
 		</form>
 	</div>
+
+	<div class="product-gallery md-effect-13" id="abirds">
+		<div class="w-slider" data-animation="slide" data-duration="500" data-infinite="1" data-easing="ease-in-quart">
+			<div class="w-slider-mask">
+				<header class="w-slide">
+					<img src="images/catalogue/birds1.jpg">	
+				</header>
+				<div class="w-slide">
+					<img src="images/catalogue/birds2.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/birds3.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/birds4.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/birds5.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/birds6.jpg">	
+				</div>
+			</div>
+			<div class="w-slider-arrow-left">
+				<div class="w-icon-slider-left"></div>
+			</div>
+			<div class="w-slider-arrow-right">
+				<div class="w-icon-slider-right"></div>
+			</div>
+			<div class="w-slider-close"> </div>
+		</div>
+	</div>
+
+	<div class="product-gallery md-effect-13" id="ladder">
+		<div class="w-slider" data-animation="slide" data-duration="500" data-infinite="1" data-easing="ease-in-quart">
+			<div class="w-slider-mask">
+				<header class="w-slide">
+					<img src="images/catalogue/ladder1.jpg">	
+				</header>
+				<div class="w-slide">
+					<img src="images/catalogue/ladder2.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/ladder3.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/ladder4.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/ladder5.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/ladder6.jpg">	
+				</div>
+
+			</div>
+			<div class="w-slider-arrow-left">
+				<div class="w-icon-slider-left"></div>
+			</div>
+			<div class="w-slider-arrow-right">
+				<div class="w-icon-slider-right"></div>
+			</div>
+			<div class="w-slider-close"> </div>
+		</div>
+	</div>
+
+
+	<div class="product-gallery md-effect-13" id="turnik">
+		<div class="w-slider" data-animation="slide" data-duration="500" data-infinite="1" data-easing="ease-in-quart">
+			<div class="w-slider-mask">
+				<header class="w-slide">
+					<img src="images/catalogue/turnik1.jpg">	
+				</header>
+				<div class="w-slide">
+					<img src="images/catalogue/turnik2.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/turnik3.jpg">	
+				</div>
+				<div class="w-slide">
+					<img src="images/catalogue/turnik4.jpg">	
+				</div>
+			</div>
+			<div class="w-slider-arrow-left">
+				<div class="w-icon-slider-left"></div>
+			</div>
+			<div class="w-slider-arrow-right">
+				<div class="w-icon-slider-right"></div>
+			</div>
+			<div class="w-slider-close"> </div>
+		</div>
+	</div>
+
+
 	<div id="overlay" class="md-overlay"></div>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

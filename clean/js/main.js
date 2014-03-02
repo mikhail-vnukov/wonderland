@@ -7,24 +7,69 @@ $(document).ready(function() {
 		clock.start();
 	}
 
-	function chargeForm() {
-		var $form = $("#popup-form");
-		var $overlay = $("#overlay");
-		var $triggers = $(".trigger");
 
-		var closeForm = function() {
-			$form.removeClass("md-show");
-			$overlay.off('click');
+	var callbacks = $.Callbacks();
+	function chargeModalStaff() {
+		var closeModalWindows = function() {
+			$(".md-show").removeClass("md-show");
+			window.overlay = false;
 		}
 
-		var openForm = function() {
-			$form.addClass("md-show");
-			$overlay.click(closeForm);
+		callbacks.add(closeModalWindows);
+
+		var openModalWindow = function(el) {
+			el.addClass("md-show");
+			window.overlay = true;
 		}
 
-		$("#close-button").click(closeForm);
-		$triggers.click(openForm);
+		var overlay = $(".md-overlay");
+		overlay.click(function() {
+			if (window.overlay) {
+				callbacks.fire();
+			}
+		})
+		window.openVideo = function openVideo(url) {
+			var $video = $('<iframe>');
+			$video.addClass("head-video");
+			$video.attr("width", "853");
+			$video.attr("height", "480");
+			$video.attr("src", url.href);
+			$video.attr("frameborder", "0");
+			$video.attr("allowfullscreen", "1");
+
+			overlay.before($video);
+			openModalWindow($video);
+
+			var disappear = function() {
+				console.log("Removing video");
+				$video.remove();
+				callbacks.remove(disappear);
+			}
+			callbacks.add(disappear);
+		}
+
+		window.openGallery = function(url) {
+			$(url.hash).addClass("md-show");
+		}
+
+
+		function chargeForm() {
+			var $form = $("#popup-form");
+			var $triggers = $(".trigger");
+
+			$("#close-button").click(closeModalWindows);
+			$triggers.click(function() {
+				openModalWindowFunction($form);
+			});
+		}
+
+		$(".w-slider-close").click(closeModalWindows);
+			window.openSlider = function() {
+		}
+
+		
+		chargeForm();
 	}
 	chargeDowncounter();
-	chargeForm();
+	chargeModalStaff();
 });

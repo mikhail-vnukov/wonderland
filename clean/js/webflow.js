@@ -1606,6 +1606,9 @@ Webflow.define('webflow-slider', function ($, _) {
     for (var i=0; i<data.pages; i++) {
       $dot = $(dot);
       if (data.nav.hasClass('w-num')) $dot.text(i+1);
+      if (data.nav.hasClass('w-playlist')) {
+        $dot.attr("data-index", i);
+      }
       if (spacing != null) $dot.css({
         'margin-left': spacing,
         'margin-right': spacing

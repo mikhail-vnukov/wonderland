@@ -206,6 +206,7 @@ header {
 	margin-top: 4px;
 	float: right;
 	text-align: center;
+	right: -59px;
 }
 .phone-section {
 	margin-top: 4px;
@@ -243,14 +244,35 @@ header {
 	margin-bottom: 55px;
 	padding: 0;
 }
+/** Head video */
 
 .video-trigger {
 	margin-top: 87px;
 	margin-bottom: 47px;
 	
 	box-shadow: 5px 5px 5px rgba(33,33,33, 0.6);
+	cursor: pointer;
 }
 
+.head-video {
+	width: 853px;
+	height: 480px;
+	z-index: 2000;
+	display: none;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+
+	margin-left: -427px;
+	margin-top: -240px;
+}
+
+.head-video.md-show {
+	display: block;
+}
+
+/*jumbo form*/
 .jumbo-form {
 	top: 8px;
 	position: absolute;
@@ -412,6 +434,10 @@ header {
 	background-image: url(../images/catalogue/list/birds.png);
 }
 
+.birds a {
+	display: block;
+}
+
 .ladder li {
 	background-image: url(../images/catalogue/list/ladder.png);
 }
@@ -420,14 +446,69 @@ header {
 	background-image: url(../images/catalogue/list/turnik.png);
 }
 
+.price {
+	position: absolute;
+	bottom: 93px;
+	left: 56px;
+	text-align: center;
+	font-size: 2em;
+	margin: 0 auto;
+	display: block;
+}
+
 .firstclass {
 	position: absolute;
-	top: -14px;
-	right: -14px;
+	top: -12px;
+	right: -12px;
 	width: 10.3em;
 }
 
+/*catalogue sliders*/
+.product-gallery.md-show {
+	display: inline-block;
+}
 
+.product-gallery * {
+	display: inline-block;
+	color: white;
+}
+.product-gallery {
+	z-index: 2000;
+	display: inline-block;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.w-slider-close {
+	position: absolute;
+	z-index: 10;
+	width: 64px;
+	height: 64px;
+	top: 0;
+	right: 0;
+	background-image: url('../images/catalogue/close.png');
+	background-size: cover;
+}
+.product-gallery .w-slide {
+	height: auto;
+	background: none;
+}
+
+.product-gallery .w-slider {
+	height: auto;
+	background: none;
+}
+
+.product-gallery img {
+	display: block;
+	margin: 0 auto;
+	border: 2em solid white;
+	/*width: 100%;*/
+	/*height: 100%;*/
+}
 /*closure*/
 .closure {
 	background-color: #fcf9f2;
@@ -515,6 +596,15 @@ footer button {
 
 /* popup */
 
+.popup-form {
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+}
+
 .submit-button {
 	float: left;
 	margin-left: 2em;
@@ -523,4 +613,28 @@ footer button {
 .close-button {
 	float: right;
 	margin-right: 2em;
+	background-color: #2c3e50;
+}
+
+.form-control {
+	margin-top: 1em;
+}
+
+.popup-form .call-to-action {
+	margin: 0.7em 0 1em; 
+	font-size: 1.9em;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	padding: 8px 12px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: rgb(85, 85, 85);
+	vertical-align: middle;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	line-height: 1.428571429;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
