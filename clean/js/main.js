@@ -49,7 +49,7 @@ $(document).ready(function() {
 		}
 
 		window.openGallery = function(url) {
-			$(url.hash).addClass("md-show");
+			openModalWindow($(url.hash));
 		}
 
 
