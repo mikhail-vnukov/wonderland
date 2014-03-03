@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 			$("#close-button").click(closeModalWindows);
 			$triggers.click(function() {
-				openModalWindowFunction($form);
+				openModalWindow($form);
 			});
 		}
 
