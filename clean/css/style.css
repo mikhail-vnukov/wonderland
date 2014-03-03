@@ -76,6 +76,10 @@ body {
 	line-height: 1.25em;
 }
 
+input, textarea {
+	font-family: 'Open Sans', sans-serif;
+}
+
 article {
 	padding-top: 64px;
 	padding-bottom: 48px;
