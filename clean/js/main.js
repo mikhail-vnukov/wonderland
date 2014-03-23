@@ -7,11 +7,30 @@ $(document).ready(function() {
 		clock.start();
 	}
 
+	function switchAction() {
+		var odd = Math.floor(new Date().getTime() / (1000*60*60*24)) % 2 == 1;
+		
+		function showFirstAction() {
+			$(".action1").show();
+		}
+
+		function showSecondAction() {
+			$(".action2").show();
+		}
+		
+		if (odd) {
+			showFirstAction();
+		} else {
+			showSecondAction();
+		}
+	}
+
 
 	var callbacks = $.Callbacks();
 	function chargeModalStaff() {
 		var closeModalWindows = function() {
 			$(".md-show").removeClass("md-show");
+			$(".form-addition").remove();
 			window.overlay = false;
 		}
 
@@ -54,22 +73,54 @@ $(document).ready(function() {
 
 
 		function chargeForm() {
-			var $form = $("#popup-form");
+			var $popupForm = $("#popup-form");
 			var $triggers = $(".trigger");
 
-			$("#close-button").click(closeModalWindows);
+			$(".close-button").click(closeModalWindows);
 			$triggers.click(function() {
-				openModalWindow($form);
+				var product = $(this).attr("data-product");
+				if (product != undefined) {
+					$popupForm.children("form").append($("<input type='hidden' class='form-addition' name='model' value='" + product + "'/>"));	
+				}
+				openModalWindow($popupForm);
 			});
+
+			function showErrorMessage() {
+				$(".form-fail").addClass("md-show");
+			}
+
+			function showSuccessMessage() {
+				$(".form-done").addClass("md-show");				
+			}
+
+			$("form").each(function() {
+				var $form = $(this);
+				$form.find("[type='submit']").click(function() {
+				// $(this).parsley('validate');
+
+					$.ajax({
+							type: "POST",
+							url: "send.php",
+							data: $form.serialize(),
+							success: function(data) {
+								showSuccessMessage();
+							}, 
+							error: function(jqXHR, textStatus, errorThrown) {
+								showErrorMessage();
+							}
+
+						});
+					return false;
+				});
+			});
+
 		}
 
 		$(".w-slider-close").click(closeModalWindows);
-			window.openSlider = function() {
-		}
 
-		
 		chargeForm();
 	}
 	chargeDowncounter();
+	switchAction();
 	chargeModalStaff();
 });

@@ -39,24 +39,20 @@
 			</a>
 			
 
-			<form class="jumbo-form">
-				<h3 class="call-to-action">Внимание, акция!<br/> Доставка - бесплатно</h3>
+			<form data-validate="parsley" class="jumbo-form">
+				<h3 class="call-to-action action1">Внимание, акция!<br/> Доставка - бесплатно</h3>
+				<h3 class="call-to-action action2">Внимание, акция!<br/> Скидка - 5%</h3>
 				<div>
 					<div id="countdown" class="clearfix countdown"></div>
 				</div>
 				<input type="text" placeholder="Как вас зовут" name="name" required="required"></input>
-				<input type="text" placeholder="Ваш телефон" name="telephone" required="required"></input>
+				<input type="text" placeholder="Ваш телефон" name="phone" required="required"></input>
 				<input type="text" placeholder="Ваш email или страница vkontakte" name="email" required="required"></input>
-				<button class="strong">Участвовать в акции</button>
+				<input type="hidden" name="submitted" id="submitted" value="true" />
+				<button type="submit" class="strong ">Участвовать в акции</button>
 				<div class="disclaimer">
 					<img src="images/jumbo/lock_icon.png">
 					Мы гарантируем, что ваши данные не будут переданы третьим лицам или использоваться в спам-рассылках.
-				</div>
-				<div class="form-done">
-					<p>Ваша заявка принята!Наши менеджеры свяжутся с вами в ближайшее время</p>
-				</div>
-				<div class="form-fail">
-					<p>Oops! Something went wrong while submitting the form :(</p>
 				</div>
 			</form>
 		</section>
@@ -65,32 +61,32 @@
 	<article class="advantages">
 		<h3>6 причин начать бизнес с "Питер Драйв":</h3>
 		<section>
-			<div class="adv-row">
-				<div class="adv adv1">
+			<div class="advantages-row">
+				<div class="advantage advantage1">
 					<h5>Цена</h5>
 					<span> Ничего лишнего, только необходимое; никаких наценок и посредников </span>
 				</div>	
-				<div class="adv adv2">
+				<div class="advantage advantage2">
 					<h5>Качество</h5>
 					<span> Аттракционы надежны и идеально выполняют свои функции </span>
 				</div>
-				<div class="adv adv3">
+				<div class="advantage advantage3">
 					<h5>Удобство</h5>	
 					<span> Все легко разобрать за три минуты без инструментов </span>
 				</div>
 			</div>
-			<div class="adv-row">
-				<div class="adv adv4">
+			<div class="advantages-row">
+				<div class="advantage advantage4">
 					<h5>Доставка по России</h5>
 					<span> Мы доставим аттракцион любым удобным для вас способом </span>
 				</div>
-				<div class="adv adv5">
+				<div class="advantage advantage5">
 					<h5>Компактность<br/></h5>
 					<span> Все аттракционы помещаются в легковой автомобиль </span>
 				</div>
-				<div class="adv adv6">
-					<h5>Самое быстро изготовление</h5>
-					<span> У нас всегда есть есть аттракционы в наличии </span>
+				<div class="advantage advantage6">
+					<h5>Самое быстрое изготовление</h5>
+					<span> У нас всегда есть аттракционы в&nbsp;наличии </span>
 				</div>
 			</div>
 			<button class="trigger">Отправить заявку</button>
@@ -132,7 +128,7 @@
 				</ul>
 				<span class="price">59 999 руб.</span>
 
-				<button class="trigger">Отправить заявку</button>
+				<button class="trigger" data-product="Angry Birds">Отправить заявку</button>
 			</div>
 
 			<div class="item ladder">
@@ -147,7 +143,7 @@
 					<li>Покраска в любой цвет</li>
 				</ul>
 				<span class="price">21 999 руб.</span>
-				<button class="trigger">Отправить заявку</button>
+				<button class="trigger" data-product="пьяная лестница">Отправить заявку</button>
 			</div>
 
 			<div class="item turnik">
@@ -163,7 +159,7 @@
 					<li>Покраска в любой цвет</li>
 				</ul>
 				<span class="price">14 500 руб.</span>
-				<button class="trigger">Отправить заявку</button>			
+				<button class="trigger" data-product="турник">Отправить заявку</button>			
 			</div>
 		</section>
 	</article>
@@ -316,28 +312,37 @@
 
 
 	<div  id="popup-form"  class="popup-form md-modal md-effect-13">
-		<form class="md-content">
+		<form class="md-content" data-validate="parsley">
 			<h3 class="call-to-action">Форма заявки</h3>
 			<input type="text" placeholder="Как вас зовут" name="name" required="required"></input>
-			<input type="text" placeholder="Ваш телефон" name="telephone" required="required"></input>
+			<input type="text" placeholder="Ваш телефон" name="phone" required="required"></input>
 			<input type="text" placeholder="Ваш email или страница vkontakte" name="email" required="required"></input>
 			<textarea rows="3" type="textarea" placeholder="Ваши комментарии" name="comment"></textarea>
+			<input type="hidden" name="submitted" id="submitted" value="true" />
 
 			<div class="form-control clearfix">
-				<button class="submit-button strong">Отправить</button>
+				<button type="submit" class="submit-button strong">Отправить</button>
 				<button id="close-button" class="close-button" type="reset">Закрыть</button>
 			</div>
 			<div class="disclaimer">
 				<img src="images/jumbo/lock_icon.png">
 				Мы гарантируем, что ваши данные не будут переданы третьим лицам или использоваться в спам-рассылках.
 			</div>
-			<div class="form-done">
-				<p>Ваша заявка принята!Наши менеджеры свяжутся с вами в ближайшее время</p>
-			</div>
-			<div class="form-fail">
-				<p>Извините, что-то пошло не так во время отправки формы :(</p>
-			</div>
 		</form>
+	</div>
+
+	<div class="form-closure md-modal form-done md-effect-13">
+		<div class="md-content">
+			Ваша заявка принята! Наши менеджеры свяжутся с вами в ближайшее время
+			<button class="close-button">Закрыть</button>
+		</div>
+	</div>
+		
+	<div class="form-closure md-modal form-fail md-effect-13">
+		<div class="md-content">
+			<p>Извините, что-то пошло не так во время отправки формы :(</p>
+			<button class="close-button">Закрыть</button>
+		</div>
 	</div>
 
 	<div class="product-gallery md-effect-13" id="abirds">
@@ -440,7 +445,6 @@
 		</div>
 	</div>
 
-
 	<div class="product-gallery md-effect-13" id="turnik">
 		<div class="w-slider" data-animation="slide" data-duration="500" data-infinite="1" data-easing="ease-in-quart">
 			<div class="w-slider-mask">
@@ -490,5 +494,32 @@
 	<script type="text/javascript" src="js/flipclock/faces/HourlyCounter.js"></script>
 
 	<script type="text/javascript" src="js/main.js"></script>
+
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+	(function (d, w, c) {
+	    (w[c] = w[c] || []).push(function() {
+	        try {
+	            w.yaCounter24205723 = new Ya.Metrika({id:24205723,
+	                    webvisor:true,
+	                    clickmap:true,
+	                    accurateTrackBounce:true});
+	        } catch(e) { }
+	    });
+
+	    var n = d.getElementsByTagName("script")[0],
+	        s = d.createElement("script"),
+	        f = function () { n.parentNode.insertBefore(s, n); };
+	    s.type = "text/javascript";
+	    s.async = true;
+	    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+	    if (w.opera == "[object Opera]") {
+	        d.addEventListener("DOMContentLoaded", f, false);
+	    } else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="//mc.yandex.ru/watch/24205723" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 </body>
 </html>
