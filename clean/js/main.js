@@ -8,7 +8,7 @@ $(document).ready(function() {
 	}
 
 	function switchAction() {
-		var odd = Math.floor(new Date().getTime() / (1000*60*60*24)) % 2 == 1;
+		var odd = (new Date().getDate() % 2) == 1;
 		
 		function showFirstAction() {
 			$(".action1").show();
